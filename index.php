@@ -10,7 +10,7 @@ class Movie{
     $this->genre = $_genre;
   }
 
-  public function getTime($_length){
+  public function setTime($_length){
     $this->length = $_length/60;
   }
 }
