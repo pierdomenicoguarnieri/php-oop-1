@@ -9,4 +9,8 @@ class Movie{
     $this->title = $_title;
     $this->genre = $_genre;
   }
+
+  public function getTime($_length){
+    $this->length = $_length/60;
+  }
 }
