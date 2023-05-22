@@ -1,23 +1,9 @@
 <?php
 
-class Movie{
-  public $title;
-  public $genre;
-  public $length;
+require_once __DIR__ . "/models/Movie.php";
 
-  function __construct($_title, $_genre, $_length){
-    $this->title = $_title;
-    $this->genre = $_genre;
-    $this->length = $this->getTime($_length);
-  }
-
-  public function getTime($_length){
-    return number_format($_length/60, 2, '.', "") . ' ore';
-  }
-}
-
-$batman = new Movie('Batman', 'Action', 130);
-$spiderman = new Movie('Spiderman', 'Action', 200);
+$batman = new Movie('Batman', 130, new MovieInfos(['Action', 'Fantasy', 'Avventura'], false));
+$titanic = new Movie('Titanic', 200, new MovieInfos('Romantico', true));
 
 var_dump($batman);
-var_dump($spiderman);
+var_dump($titanic);
