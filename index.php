@@ -26,7 +26,7 @@ $movies = [
             <th scope="col">Titolo</th>
             <th scope="col">Genere</th>
             <th scope="col">Lunghezza</th>
-            <th scope="col"> < 18 </th>
+            <th scope="col"> Adatto ai bambini </th>
           </tr>
         </thead>
         <tbody>
@@ -39,7 +39,7 @@ $movies = [
                   <?php endforeach; ?>
               </td>
               <td><?php echo $movie->length; ?></td>
-              <?php ($movie->movieInfos->isAdult) ? $movie->movieInfos->isAdult = 'Per adulti' : $movie->movieInfos->isAdult = 'Adatto ai bambini' ?>
+              <?php ($movie->movieInfos->isAdult) ? $movie->movieInfos->isAdult = 'Sì' : $movie->movieInfos->isAdult = 'No' ?>
               <td><?php echo $movie->movieInfos->isAdult; ?></td>
             </tr>
           <?php endforeach; ?>
