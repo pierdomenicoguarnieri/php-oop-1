@@ -4,7 +4,8 @@ require_once __DIR__ . "/models/Movie.php";
 
 $movies = [
   new Movie('Batman', 130, new MovieInfos(['Action', 'Fantasy', 'Avventura'], false)),
-  new Movie('Titanic', 200, new MovieInfos(['Romantico'], true)),
+  new Movie('Titanic', 200, new MovieInfos(['Romantico'], false)),
+  new Movie('Super Mario Bros - The Movie', 125, new MovieInfos(['Cartoon', 'Animated'], true)),
 ];
 
 ?>
